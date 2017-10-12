@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/f60dd3f0ed26c04a4d219268918d2583813d702c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/classes_38e1775891991c182bd35a4d1a0bbc5d015cec50.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/3de920437ce35b235ae50f849a30a7afec011c6a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="56d3e81fee5f47a7a12ab65f4620f580c9c71d1e">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/classes_fe1af7a81fe9c00abbd82c8a0cb3588d996acd78.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/macbook-pro/.android/build-cache/3de920437ce35b235ae50f849a30a7afec011c6a/output/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/infer-annotations-4.0_3604843ee98c508dae8851c99fa92430af1daeea/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/0165d003498313924a7de0e2f0cb56772a0e3648/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/classes_5dcb08d74ebffa1012b9bbb3bbcb87ecaf8d7f3e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/3de920437ce35b235ae50f849a30a7afec011c6a/output/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_3604843ee98c508dae8851c99fa92430af1daeea.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_912379ce6a8349c79778545845952cd46a5b51a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/8f86501b1a88d734de4c179dba888b78b05ab207/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/classes_2d31f987d361532db6fa389e946416cb91b5c6be.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/macbook-pro/.android/build-cache/3de920437ce35b235ae50f849a30a7afec011c6a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="56d3e81fee5f47a7a12ab65f4620f580c9c71d1e">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fe1af7a81fe9c00abbd82c8a0cb3588d996acd78/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/1bcaaa0a385902bcc09a9a8febdb29dc6d02de99/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/classes_ffa2abc5639a2755daf45605df546edf0ab8d044.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/08eb139dfb5b1f68b102da62e581938fe31fb0db/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/classes_43816a637827049aad06a206a010fc0bd37f748b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee3478d7d8e7ff27b9981b205a4706d9ac633593">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a377cfade0f732b41781559410a8468d448a59f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/macbook-pro/.android/build-cache/3ea822765b868bd9feabdfdd9bcd99b7989b09bb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/pre-dexed/debug/classes_550f95e69ddf1acf4b3ad1ce928cc548b961a2d1.jar" />
+    </item>
+
+</items>
