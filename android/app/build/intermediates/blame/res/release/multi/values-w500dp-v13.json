@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-w500dp-v13/values-w500dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 54,
+                    "endOffset": 105
+                },
+                "from": {
+                    "file": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/values-w500dp/values-w500dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 283,
+                        "endColumn": 54,
+                        "endOffset": 333
+                    }
+                }
+            }
+        ]
+    }
+]
