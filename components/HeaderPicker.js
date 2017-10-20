@@ -34,7 +34,7 @@ var {height, width} = Dimensions.get('window');
    
   }
 
-  componentDidMount(){
+  componentWillMount(){
     var itemChoi=[];
     var itemNghi=[];
     var itemAn=[];
@@ -172,7 +172,7 @@ var {height, width} = Dimensions.get('window');
   const styles = StyleSheet.create({
    
     wrapper:{
-        height:height/10,
+        height:height/15,
         padding:10,
         backgroundColor:'#1D93F4',
         justifyContent:'center'

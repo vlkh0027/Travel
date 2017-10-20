@@ -5,7 +5,7 @@ import AnUongStack from './an_uong/AnUongStack';
 import LienHeView from './lien_he/LienHeView';
 import NhaNghiStack from './nha_nghi/NhaNghiStack';
 import VuiChoiStack from './vui_choi/VuiChoiStack';
-
+import AnUongView from './an_uong/AnUongView';
 
 
 import HeaderPicker from './HeaderPicker';

@@ -23,16 +23,11 @@ export default class NhaNghiDetail extends Component {
         
         const{item} = this.props.navigation.state.params;
         return (
+            <View style={{flex:1}}>
+            
             <ScrollView style={wrapper}>
                 <View style={cardStyle}>
-                    <View style={header}>
-                        <TouchableOpacity onPress={this.goBack.bind(this)}>
-                            <Image style={backStyle} source={require('./../../icon/back.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image style={cartStyle} source={require('./../../icon/hotel.png')} />
-                        </TouchableOpacity>
-                    </View>
+                    
                     <View style={imageContainer}>
                        
                     <Swiper showsButtons={true} autoplay={true} loop={true}
@@ -53,7 +48,7 @@ export default class NhaNghiDetail extends Component {
                             <Text style={textMain}>
                                 <Text style={textBlack}>{`${item.phuot.ten}`.toUpperCase()}</Text>
                                 <Text style={textHighlight}> / </Text>
-                                <Text style={textSmoke}>Chỉ từ {item.phuot.gia} vnd - 1 ngày</Text>
+                                <Text style={textSmoke}>Chỉ từ {item.phuot.gia} 1 ngày</Text>
                             </Text>
                         </View>
                         <View style={descContainer}>
@@ -67,20 +62,27 @@ export default class NhaNghiDetail extends Component {
                     </View>
                 </View>
             </ScrollView>
+                <View style={header}>
+                    <Text></Text>
+                    <TouchableOpacity onPress={this.goBack.bind(this)}>
+                        <Image style={backStyle} source={require('./../../icon/back.png')} />
+                    </TouchableOpacity>
+                </View>
+            </View>
         );
     }
 }
 
 const { width,height } = Dimensions.get('window');
 const swiperWidth = (width ) - 50;
-const swiperHeight = (swiperWidth -70);
+const swiperHeight = (swiperWidth );
 
 const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         backgroundColor: '#D6D6D6',
-        height:height,
-        marginBottom:10,
+        
+        //marginBottom:10,
     },
     cardStyle: {
         flex: 1,
@@ -92,9 +94,10 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        flex: 1,
+        backgroundColor:"#D6D6D6",
+        height:height/20,
         paddingHorizontal: 15,
-        paddingTop: 10
+       
     },
     cartStyle: {
         width: 25,
@@ -102,7 +105,8 @@ const styles = StyleSheet.create({
     },
     backStyle: {
         width: 25,
-        height: 25
+        height: 25,
+        
     },
     
     footer: {

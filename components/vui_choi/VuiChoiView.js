@@ -8,7 +8,8 @@ import {
   Image,
   TouchableOpacity,
   FlatList,
-  ScrollView
+  ScrollView,
+  TouchableHighlight,
 } from 'react-native';
 
 import firebase from './../FirebaseConf';
@@ -45,6 +46,7 @@ class VuiChoiView extends Component {
             return(
                 
                 <FlatList
+                style={{marginBottom:20}}
                 keyExtractor={(item, index) => item.key}
                 data={this.props.arrVuiChoi}
                 renderItem={({item}) => 
@@ -52,14 +54,14 @@ class VuiChoiView extends Component {
                 <View style={styles.textViewTittle}> 
                         <Text style={styles.textTittle}>{item.key}. {item.phuot.ten}</Text>
                     </View>
-                    <TouchableOpacity 
+                    <TouchableHighlight                
                         onPress={()=>{this.gotoDetail(item)}} >
                     <View style={styles.imageView}>
                         <Image style={styles.image} source={{uri:`${item.phuot.hinh}`}}/>
                     </View>
-                    </TouchableOpacity>
+                    </TouchableHighlight>
                     <View style={styles.lastRowInfo}> 
-                    <Text style={styles.textPrice}>Giá chỉ từ: {item.phuot.gia} vnd</Text>  
+                    <Text style={styles.textPrice}>Giá chỉ từ: {item.phuot.gia} </Text>  
                     </View>
                 </View>
                 }
@@ -85,6 +87,8 @@ const styles=StyleSheet.create({
         shadowOffset:{width:0, height:3},
         shadowOpacity:0.2,
         marginBottom:-5,
+        borderRadius:20,
+
     },
     textViewTittle:{
         height:30,
@@ -93,6 +97,7 @@ const styles=StyleSheet.create({
     image:{
         width:imageWidth,
         height:imageHeight,
+        borderRadius:40,
     },
     imageView:{
        

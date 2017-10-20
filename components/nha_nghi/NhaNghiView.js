@@ -7,7 +7,8 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
-  FlatList 
+  FlatList ,
+  TouchableHighlight
 } from 'react-native';
 
 import {connect} from 'react-redux';
@@ -40,6 +41,7 @@ class NhaNghiView extends Component {
         }else{
             return(
                 <FlatList
+                style={{marginBottom:20}}
                 keyExtractor={(item, index) => item.key}
                 data={this.props.arrNhaNghi}
                 renderItem={({item}) => 
@@ -47,14 +49,14 @@ class NhaNghiView extends Component {
                 <View style={styles.textViewTittle}> 
                         <Text style={styles.textTittle}>{item.key}. {item.phuot.ten}</Text>
                     </View>
-                    <TouchableOpacity 
+                    <TouchableHighlight 
                         onPress={()=>{this.gotoDetail(item)}} >
                     <View style={styles.imageView}>
                         <Image style={styles.image} source={{uri:`${item.phuot.hinh}`}}/>
                     </View>
-                    </TouchableOpacity>
+                    </TouchableHighlight>
                     <View style={styles.lastRowInfo}> 
-                    <Text style={styles.textPrice}>Giá chỉ từ: {item.phuot.gia} vnd / 1 ngày</Text>  
+                    <Text style={styles.textPrice}>Giá chỉ từ: {item.phuot.gia} </Text>  
                     </View>
                 </View>
                 }
@@ -72,6 +74,7 @@ const styles=StyleSheet.create({
         backgroundColor:'#FFFFFF',
         padding:10,
         //paddingBottom:5,
+        borderRadius:20,
         justifyContent:'center',
         shadowColor:'#404040',
         shadowOffset:{width:0, height:3},
@@ -85,6 +88,7 @@ const styles=StyleSheet.create({
     image:{
         width:imageWidth,
         height:imageHeight,
+        borderRadius:40,
     },
     imageView:{
        

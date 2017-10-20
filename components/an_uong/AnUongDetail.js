@@ -22,16 +22,12 @@ export default class AnUongDetail extends Component {
         } = styles;
        const{item} = this.props.navigation.state.params;
         return (
+            <View style={{flex:1}}>
+                   
+                   
             <ScrollView style={wrapper}>
                 <View style={cardStyle}>
-                    <View style={header}>
-                        <TouchableOpacity onPress={this.goBack.bind(this)}>
-                            <Image style={backStyle} source={require('./../../icon/back.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image style={cartStyle} source={require('./../../icon/restaurant.png')} />
-                        </TouchableOpacity>
-                    </View>
+                    
                     <View style={imageContainer}>
 
                     <Swiper showsButtons={true} autoplay={true} loop={true}
@@ -52,7 +48,7 @@ export default class AnUongDetail extends Component {
                             <Text style={textMain}>
                                 <Text style={textBlack}>{`${item.phuot.ten}`.toUpperCase()}</Text>
                                 <Text style={textHighlight}> / </Text>
-                                <Text style={textSmoke}>{item.phuot.gia} vnd</Text>
+                                <Text style={textSmoke}>{item.phuot.gia} </Text>
                             </Text>
                         </View>
                         <View style={descContainer}>
@@ -61,26 +57,34 @@ export default class AnUongDetail extends Component {
                                 <Text style={txtMaterial}>Giờ mở cửa: {item.phuot.giomocua}</Text>
                                 <Text style={txtColor}>Địa chỉ: {item.phuot.diachi}</Text>
                                 <TouchableOpacity><Text style={txtColor}>=> Chạm để chỉ đường</Text></TouchableOpacity>
-                                <TouchableOpacity><Text style={txtColor}>Số Điện Thoại: {item.phuot.sdt}</Text></TouchableOpacity>
+                                
                             </View>
                         </View>
                     </View>
                 </View>
+                
             </ScrollView>
+                <View style={header}> 
+                        <Text></Text>
+                        <TouchableOpacity onPress={this.goBack.bind(this)}>
+                            <Image style={backStyle} source={require('./../../icon/back.png')} />
+                        </TouchableOpacity>
+                    </View>
+            </View>
         );
     }
 }
 
 const { width,height } = Dimensions.get('window');
 const swiperWidth = (width ) - 50;
-const swiperHeight = (swiperWidth -70);
+const swiperHeight = (swiperWidth );
 
 const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         backgroundColor: '#D6D6D6',
-        height:height,
-        marginBottom:10,
+       
+       
     },
     cardStyle: {
         flex: 1,
@@ -92,9 +96,11 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        flex: 1,
+        height:height/20,
+        backgroundColor:"#D6D6D6",
         paddingHorizontal: 15,
-        paddingTop: 10
+        
+           
     },
     cartStyle: {
         width: 25,
@@ -102,7 +108,8 @@ const styles = StyleSheet.create({
     },
     backStyle: {
         width: 25,
-        height: 25
+        height: 25,
+        
     },
     
     footer: {

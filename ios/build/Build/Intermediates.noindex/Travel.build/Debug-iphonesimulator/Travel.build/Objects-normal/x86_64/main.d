@@ -1,2 +1,3 @@
-dependencies: /Users/macbook-pro/Desktop/Github/Travel/ios/Travel/main.m \
-  /Users/macbook-pro/Desktop/Github/Travel/ios/Travel/AppDelegate.h
+dependencies: \
+  /Users/macbook-pro/Desktop/Github/TravelBook/ios/Travel/main.m \
+  /Users/macbook-pro/Desktop/Github/TravelBook/ios/Travel/AppDelegate.h
