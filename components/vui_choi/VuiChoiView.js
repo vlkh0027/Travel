@@ -46,7 +46,7 @@ class VuiChoiView extends Component {
             return(
                 
                 <FlatList
-                style={{marginBottom:20}}
+               
                 keyExtractor={(item, index) => item.key}
                 data={this.props.arrVuiChoi}
                 renderItem={({item}) => 
@@ -86,13 +86,14 @@ const styles=StyleSheet.create({
         shadowColor:'#404040',
         shadowOffset:{width:0, height:3},
         shadowOpacity:0.2,
-        marginBottom:-5,
-        borderRadius:20,
+        marginBottom:5,
+        borderRadius:10,
 
     },
     textViewTittle:{
-        height:30,
+        height:42,
         justifyContent:'center',
+        
     },
     image:{
         width:imageWidth,
@@ -104,7 +105,7 @@ const styles=StyleSheet.create({
     },
     textTittle:{
         fontFamily:'Avenir',
-        fontSize:14,
+        fontSize:16,
         fontWeight:'200',
         color:'#1F2328'
     },

@@ -41,7 +41,7 @@ class NhaNghiView extends Component {
         }else{
             return(
                 <FlatList
-                style={{marginBottom:20}}
+                //style={{marginBottom:20}}
                 keyExtractor={(item, index) => item.key}
                 data={this.props.arrNhaNghi}
                 renderItem={({item}) => 
@@ -74,16 +74,17 @@ const styles=StyleSheet.create({
         backgroundColor:'#FFFFFF',
         padding:10,
         //paddingBottom:5,
-        borderRadius:20,
+        borderRadius:10,
         justifyContent:'center',
         shadowColor:'#404040',
         shadowOffset:{width:0, height:3},
         shadowOpacity:0.2,
-        marginBottom:-5,
+        marginBottom:5,
     },
     textViewTittle:{
-        height:30,
+        height:42,
         justifyContent:'center',
+       
     },
     image:{
         width:imageWidth,
@@ -95,7 +96,7 @@ const styles=StyleSheet.create({
     },
     textTittle:{
         fontFamily:'Avenir',
-        fontSize:14,
+        fontSize:16,
         fontWeight:'200',
         color:'#1F2328'
     },

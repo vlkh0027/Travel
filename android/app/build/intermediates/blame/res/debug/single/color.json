@@ -1,15 +1,11 @@
 [
     {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_primary_text_material_dark.xml"
-    },
-    {
         "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
         "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/macbook-pro/.android/build-cache/5b44cef156a52c8f3ee50e1919bf785d13a49a29/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
@@ -36,39 +32,19 @@
         "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/switch_thumb_material_dark.xml"
     },
     {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/switch_thumb_material_dark.xml"
-    },
-    {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_secondary_text_material_light.xml"
-    },
-    {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/switch_thumb_material_light.xml"
-    },
-    {
         "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
         "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/macbook-pro/.android/build-cache/5b44cef156a52c8f3ee50e1919bf785d13a49a29/output/res/color/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
         "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_primary_text_material_light.xml"
-    },
-    {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/macbook-pro/.android/build-cache/b60a7498ecebcd6fb54875c6deda93d6b6a6ce25/output/res/color/abc_search_url_text.xml"
+        "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/macbook-pro/.android/build-cache/5b44cef156a52c8f3ee50e1919bf785d13a49a29/output/res/color/common_google_signin_btn_tint.xml"
     }
 ]

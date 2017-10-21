@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/macbook-pro/Desktop/Github/Travel/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
-        "source": "/Users/macbook-pro/Desktop/Github/Travel/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
         "source": "/Users/macbook-pro/Desktop/Github/TravelBook/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     }

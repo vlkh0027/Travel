@@ -3,14 +3,65 @@ import {
     View, Text, StyleSheet, Image, Dimensions, ScrollView, TouchableOpacity 
 } from 'react-native';
 
+import getDirections from 'react-native-google-maps-directions';
+
 import Swiper from 'react-native-swiper';
 
 export default class AnUongDetail extends Component {
+
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          latitude: null,
+          longitude: null,
+          error: null,
+        };
+      }
 
     goBack() {
         this.props.navigation.goBack()
     }
 
+    componentDidMount() {
+        this.watchId = navigator.geolocation.watchPosition(
+          (position) => {
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null,
+            });
+          },
+          (error) => this.setState({ error: error.message }),
+          { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000, distanceFilter: 10 },
+        );
+      }
+    
+      componentWillUnmount() {
+        navigator.geolocation.clearWatch(this.watchId);
+      }
+
+    Go = () => {
+        
+        const data = {
+           source: {
+            latitude: this.state.latitude,
+            longitude: this.state.longitude
+          },
+          destination: {
+            latitude: this.props.navigation.state.params.item.phuot.lat,
+            longitude: this.props.navigation.state.params.item.phuot.long
+          },
+          params: [
+            {
+              key: "dirflg",
+              value: "c"
+            }
+          ]
+        }
+     
+        getDirections(data)
+      }
 
     render() {
         const {
@@ -56,7 +107,9 @@ export default class AnUongDetail extends Component {
                             <View style={{ justifyContent: 'space-between', paddingTop: 15 }}>
                                 <Text style={txtMaterial}>Giờ mở cửa: {item.phuot.giomocua}</Text>
                                 <Text style={txtColor}>Địa chỉ: {item.phuot.diachi}</Text>
-                                <TouchableOpacity><Text style={txtColor}>=> Chạm để chỉ đường</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={()=>this.Go()}>
+                                    <Text style={txtColor}>=> Chạm để chỉ đường</Text>
+                                </TouchableOpacity>
                                 
                             </View>
                         </View>
@@ -66,8 +119,10 @@ export default class AnUongDetail extends Component {
             </ScrollView>
                 <View style={header}> 
                         <Text></Text>
-                        <TouchableOpacity onPress={this.goBack.bind(this)}>
+                        <TouchableOpacity  
+                        onPress={this.goBack.bind(this)}>
                             <Image style={backStyle} source={require('./../../icon/back.png')} />
+                            <Text style={{fontSize:10}}>Quay về</Text>
                         </TouchableOpacity>
                     </View>
             </View>
@@ -77,7 +132,7 @@ export default class AnUongDetail extends Component {
 
 const { width,height } = Dimensions.get('window');
 const swiperWidth = (width ) - 50;
-const swiperHeight = (swiperWidth );
+const swiperHeight = (swiperWidth + 50);
 
 const styles = StyleSheet.create({
     wrapper: {
@@ -96,7 +151,7 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        height:height/20,
+        height:height/15,
         backgroundColor:"#D6D6D6",
         paddingHorizontal: 15,
         
