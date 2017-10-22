@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		YXjj9djiC/5rVF6Xnt6DHp4tol8=
+		xhOL9A8Yq7vtx+wmpeA5HnRuyDI=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -51,7 +51,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9HUFMdjtWKFabdBPl47+nOPe3pM=
+		9z6zrkjtYBFs4qkKbHubvB0MiXw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -63,19 +63,19 @@
 		</data>
 		<key>PlugIns/TravelTests.xctest.dSYM/Contents/Resources/DWARF/TravelTests</key>
 		<data>
-		3ZRQb75D0cPdH+EMjLOQmWX04Lc=
+		gSgpHm8yLKVMrf0PgW46lo8HIMw=
 		</data>
 		<key>PlugIns/TravelTests.xctest/Info.plist</key>
 		<data>
-		GoxQOvup/a/crHR0ztUwnzEk4Oc=
+		MRm7u/UrNjN5pFy46UnzSenAZsM=
 		</data>
 		<key>PlugIns/TravelTests.xctest/TravelTests</key>
 		<data>
-		Oi25njxP/8xfttpVwhz/LVoBliI=
+		nRQZmblHupueaeFMApjPKqg+W7o=
 		</data>
 		<key>PlugIns/TravelTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		OOUzwJjDxHp43XPep68nb3tooKs=
+		2hNSGjr2vwDG+8K4NBSrnvGwNeY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -84,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YXjj9djiC/5rVF6Xnt6DHp4tol8=
+			xhOL9A8Yq7vtx+wmpeA5HnRuyDI=
 			</data>
 			<key>hash2</key>
 			<data>
-			m2B5EpfTOEswd2WFxrW9NOqAdlBA2URKnStcPrEbWps=
+			qwtTDxLZ+9UVw7jtbtR1B3P7ito+5ZvgMqh8y5MeutM=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -207,44 +207,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3ZRQb75D0cPdH+EMjLOQmWX04Lc=
+			gSgpHm8yLKVMrf0PgW46lo8HIMw=
 			</data>
 			<key>hash2</key>
 			<data>
-			U6nZ7bqn0RFDRvlNJtOdaWvUrH6x0rylzw6GFfeIlNs=
+			HaO2KP2E7x6T5U0ONtDlsvPISAeASZkcL0Ni/Mbc1xs=
 			</data>
 		</dict>
 		<key>PlugIns/TravelTests.xctest/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GoxQOvup/a/crHR0ztUwnzEk4Oc=
+			MRm7u/UrNjN5pFy46UnzSenAZsM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bcf+BJXXo63MVL+RqqIaRrOk3UmaTy3gX7HL5536JV8=
+			5G+OxSHPNTuPWDCA9VMQu+Hx59OuKQLkyEd5Jgjg3jU=
 			</data>
 		</dict>
 		<key>PlugIns/TravelTests.xctest/TravelTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Oi25njxP/8xfttpVwhz/LVoBliI=
+			nRQZmblHupueaeFMApjPKqg+W7o=
 			</data>
 			<key>hash2</key>
 			<data>
-			SMOukLWhhnHg3TaiK+z5138cUWV+jVW28fhMMnPslFI=
+			qKlFOdw3ZGFFVwY+BSriWyJTUKu2qDJb5RRFOjyMkRc=
 			</data>
 		</dict>
 		<key>PlugIns/TravelTests.xctest/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OOUzwJjDxHp43XPep68nb3tooKs=
+			2hNSGjr2vwDG+8K4NBSrnvGwNeY=
 			</data>
 			<key>hash2</key>
 			<data>
-			vn722UrBywN8oRNCT/fiWpHVzs604DNVBRsqNohLmC4=
+			UY6umfXvnMVkkF6uksVqcrC7+T6ru5++3bAH8nL4yfc=
 			</data>
 		</dict>
 	</dict>

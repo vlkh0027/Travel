@@ -42,7 +42,7 @@ export default class AnUongDetail extends Component {
       }
 
     Go = () => {
-        
+        //console.log("lalalalala" +this.props.navigation.state.params.item.phuot.lat+"   "+this.props.navigation.state.params.item.phuot.long);
         const data = {
            source: {
             latitude: this.state.latitude,
