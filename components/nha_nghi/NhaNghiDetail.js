@@ -80,19 +80,17 @@ export default class NhaNghiDetail extends Component {
                     
                     <View style={imageContainer}>
                        
-                    <ScrollView
-                    style={{paddingTop:10}}
-                    horizontal={true} 
-                    pagingEnabled={true}
-                    showsHorizontalScrollIndicator={true}
-                    scrollIndicatorInsets={{top:10, left:10, bottom:10, right:10}}
-                 >
-                    <Image source={{uri:`${item.phuot.hinhtonghop.hinh1}`}} style={productImageStyle} />
-                    <Image source={{uri:`${item.phuot.hinhtonghop.hinh2}`}} style={productImageStyle} />
-                    <Image source={{uri:`${item.phuot.hinhtonghop.hinh3}`}} style={productImageStyle} />
-                    <Image source={{uri:`${item.phuot.hinhtonghop.hinh4}`}} style={productImageStyle} />
-                    <Image source={{uri:`${item.phuot.hinhtonghop.hinh5}`}} style={productImageStyle} />
-                </ScrollView>
+                    <Swiper showsButtons={true} autoplay={true} loop={true}
+                    showsPagination width={swiperWidth} height={swiperHeight}
+                 style={{marginTop:10}}> 
+                       
+                           <Image source={{uri:`${item.phuot.hinhtonghop.hinh1}`}} style={productImageStyle} />
+                           <Image source={{uri:`${item.phuot.hinhtonghop.hinh2}`}} style={productImageStyle} />
+                          <Image source={{uri:`${item.phuot.hinhtonghop.hinh3}`}} style={productImageStyle} />
+                           <Image source={{uri:`${item.phuot.hinhtonghop.hinh4}`}} style={productImageStyle} />
+                           <Image source={{uri:`${item.phuot.hinhtonghop.hinh5}`}} style={productImageStyle} />
+                        
+                   </Swiper>
 
                     </View>
                     <View style={footer}>
@@ -100,7 +98,7 @@ export default class NhaNghiDetail extends Component {
                             <Text style={textMain}>
                                 <Text style={textBlack}>{`${item.phuot.ten}`.toUpperCase()}</Text>
                                 <Text style={textHighlight}> / </Text>
-                                <Text style={textSmoke}>Chỉ từ {item.phuot.gia} 1 ngày</Text>
+                                <Text style={textSmoke}>Chỉ từ {item.phuot.gia} 1 ngày - Cuối tuần giá khác</Text>
                             </Text>
                         </View>
                         <View style={descContainer}>

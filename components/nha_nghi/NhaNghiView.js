@@ -28,6 +28,7 @@ class NhaNghiView extends Component {
         if (this.refs.myRef) 
             this.setState({myVar: true});
         
+        
     }
 
     gotoDetail(item){
@@ -36,11 +37,13 @@ class NhaNghiView extends Component {
     }
     
     render() {
+        
         if(this.props.isLoading === true || this.props.arrNhaNghi === []){
             return <Loading/>
         }else{
             return(
                 <FlatList
+                
                 //style={{marginBottom:20}}
                 keyExtractor={(item, index) => item.key}
                 data={this.props.arrNhaNghi}
@@ -58,7 +61,9 @@ class NhaNghiView extends Component {
                     <View style={styles.lastRowInfo}> 
                     <Text style={styles.textPrice}>Giá chỉ từ: {item.phuot.gia} </Text>  
                     </View>
+                    
                 </View>
+                
                 }
             />
             );

@@ -2,10 +2,11 @@ import React,{Component} from 'react';
 import {View, Text, Dimensions, Image, StyleSheet} from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import AnUongStack from './an_uong/AnUongStack';
-import LienHeView from './lien_he/LienHeView';
+import HoTroView from './lien_he/HoTroView';
 import NhaNghiStack from './nha_nghi/NhaNghiStack';
 import VuiChoiStack from './vui_choi/VuiChoiStack';
 import AnUongView from './an_uong/AnUongView';
+import LichTrinh from './lien_he/LichTrinh';
 
 
 import HeaderPicker from './HeaderPicker';
@@ -21,6 +22,7 @@ export default  class Home extends Component {
     this.state= {
       //selectedTab: 'vuichoi',
       //selectedCity:"asd",
+      
     }
   }
 
@@ -64,13 +66,23 @@ export default  class Home extends Component {
 
               </TabNavigator.Item>
               <TabNavigator.Item
-                selected={this.state.selectedTab === 'lienhe'}
-                title="Liên hệ"
-                renderIcon={() => <Image style={styles.icon}  source={require('./../icon/phone.png')}/>}
-                renderSelectedIcon={() => <Image style={styles.icon} source={require('./../icon/phone_fill.png')}/>} 
+                selected={this.state.selectedTab === 'lichtrinh'}
+                title="Lịch trình"
+                renderIcon={() => <Image style={styles.icon}  source={require('./../icon/brain.png')}/>}
+                renderSelectedIcon={() => <Image style={styles.icon} source={require('./../icon/brainfill.png')}/>} 
                 selectedTitleStyle={{color:'#1D93F4', fontFamily:'Avenir'}}  
-                onPress={() => this.setState({ selectedTab: 'lienhe' })}>
-                <LienHeView/>
+                onPress={() => this.setState({ selectedTab: 'lichtrinh' })}>
+                <LichTrinh/>
+
+              </TabNavigator.Item>
+              <TabNavigator.Item
+                selected={this.state.selectedTab === 'tienich'}
+                title="Tiên ích"
+                renderIcon={() => <Image style={styles.icon}  source={require('./../icon/atm.png')}/>}
+                renderSelectedIcon={() => <Image style={styles.icon} source={require('./../icon/atmfill.png')}/>} 
+                selectedTitleStyle={{color:'#1D93F4', fontFamily:'Avenir'}}  
+                onPress={() => this.setState({ selectedTab: 'tienich' })}>
+                <HoTroView/>
 
               </TabNavigator.Item>
             </TabNavigator>

@@ -5,6 +5,8 @@ const defaultState = {
     arrAnUong:[],
     arrNhaNghi:[],
     arrVuiChoi:[],
+    arrATM:[],
+    arrCayXang:[],
     isLoading:true,
 };
 
@@ -15,6 +17,8 @@ const reducer = (state = defaultState, action) => {
             arrAnUong:action.arrAnUong,
             arrNhaNghi:action.arrNhaNghi,
             arrVuiChoi:action.arrVuiChoi,
+            arrATM:action.arrATM,
+            arrCayXang:action.arrCayXang,
             isLoading:false, 
             };
         default :

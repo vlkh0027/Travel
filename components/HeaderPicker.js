@@ -26,10 +26,12 @@ var {height, width} = Dimensions.get('window');
     if (this.refs.myRef) 
         this.setState({myVar: true});
     this.state={
-      cityName: 'Chọn thành phố',
+      cityName: 'Nhấn Chọn thành phố',
       arrAn:[],
       arrNghi:[],
       arrChoi:[],
+      arrATM:[],
+      arrCayXang:[],
     }
    
   }
@@ -38,6 +40,8 @@ var {height, width} = Dimensions.get('window');
     var itemChoi=[];
     var itemNghi=[];
     var itemAn=[];
+    var itemATM=[];
+    var itemCayXang=[];
     
 
     itemRef = firebase.database();
@@ -45,6 +49,8 @@ var {height, width} = Dimensions.get('window');
     phuotChoi = itemRef.ref('phuot').child("DaLat").child('choi').child('thongtin');
     phuotNghi = itemRef.ref('phuot').child("DaLat").child('nghi').child('thongtin');
     phuotAn = itemRef.ref('phuot').child("DaLat").child('an').child('thongtin');
+    phuotATM = itemRef.ref('phuot').child("DaLat").child('atm');
+    phuotCayXang = itemRef.ref('phuot').child("DaLat").child('cayxang');
    
   
     phuotChoi.on('value', (snap)=>{
@@ -83,18 +89,60 @@ var {height, width} = Dimensions.get('window');
            
         });        
     }); 
+    phuotATM.on('value', (snap)=>{
+        
+              snap.forEach((data)=>{
+                  
+                itemATM.push(
+                  { 
+                      key:data.key,
+                      phuot:data.val(),
+                  });
+                 
+              });        
+          });  
+    phuotCayXang.on('value', (snap)=>{
+    
+            snap.forEach((data)=>{
+                
+            itemCayXang.push(
+                { 
+                    key:data.key,
+                    phuot:data.val(),
+                });
+                
+            });        
+        });  
   
 
-    this.props.SelectedCity("DaLat",itemChoi,itemNghi,itemAn)
+    this.props.SelectedCity("DaLat",itemChoi,itemNghi,itemAn,itemATM,itemCayXang)
   }
 
     render() {
       let index = 0;
       const data = [
           { key: index++, section: true, label: 'Du Lịch' },
+          { key: index++, label: 'Cần Thơ',name:'CanTho' },
+          { key: index++, label: 'Côn Đảo',name:'ConDao' },
           { key: index++, label: 'Đà Lạt',name:'DaLat' },
-          { key: index++, label: 'Vũng Tàu',name:'VungTau' },
-          
+          { key: index++, label: 'Đà Nẵng',name:'DaNang' },
+          { key: index++, label: 'Hà Nội',name:'HaNoi' },
+          { key: index++, label: 'Hạ Long',name:'HaLong' },
+          { key: index++, label: 'Hải Phòng',name:'HaiPhong' },
+          { key: index++, label: 'Hồ Chí Minh',name:'HoChiMinh' },
+          { key: index++, label: 'Hội An',name:'HoiAn' },
+          { key: index++, label: 'Huế',name:'Hue' },
+          { key: index++, label: 'Lý Sơn',name:'LySon' },
+          { key: index++, label: 'Mũi Né',name:'MuiNe' },
+          { key: index++, label: 'Nha Trang',name:'NhaTrang' },
+          { key: index++, label: 'Ninh Thuận',name:'NinhThuan' },
+          { key: index++, label: 'Phú Quốc',name:'PhuQuoc' },
+          { key: index++, label: 'Phan Thiết',name:'PhanThiet' },
+          { key: index++, label: 'Phú Yên',name:'PhuYen' },
+          { key: index++, label: 'Quy Nhơn - Bình Định',name:'QuyNhon' },
+          { key: index++, label: 'Vũng Tàu',name:'VungTau' },   
+          { key: index++, label: 'Sa Pa',name:'SaPa' },
+                 
       ];
 
       const{screenProps} = this.props;
@@ -107,13 +155,16 @@ var {height, width} = Dimensions.get('window');
                         var itemChoi=[];
                         var itemNghi=[];
                         var itemAn=[];
-                       
+                        var itemATM=[];
+                        var itemCayXang=[];
                      this.setState({cityName:option.label}),
                     itemRef = firebase.database();
                    
                         phuotChoi = itemRef.ref('phuot').child(option.name).child('choi').child('thongtin');
                         phuotNghi = itemRef.ref('phuot').child(option.name).child('nghi').child('thongtin');
                         phuotAn = itemRef.ref('phuot').child(option.name).child('an').child('thongtin');
+                        phuotATM = itemRef.ref('phuot').child("DaLat").child('atm');
+                        phuotCayXang = itemRef.ref('phuot').child("DaLat").child('cayxang');
                  
                         console.log("ko rỗng");
                       
@@ -153,10 +204,33 @@ var {height, width} = Dimensions.get('window');
                                
                             });        
                         }); 
-
+                        phuotATM.on('value', (snap)=>{
+                            
+                                  snap.forEach((data)=>{
+                                      
+                                    itemATM.push(
+                                      { 
+                                          key:data.key,
+                                          phuot:data.val(),
+                                      });
+                                     
+                                  });        
+                              });  
+                        phuotCayXang.on('value', (snap)=>{
+                        
+                                snap.forEach((data)=>{
+                                    
+                                itemCayXang.push(
+                                    { 
+                                        key:data.key,
+                                        phuot:data.val(),
+                                    });
+                                    
+                                });        
+                            });  
                         
                     
-                     this.props.SelectedCity(option.name,itemChoi,itemNghi,itemAn)
+                     this.props.SelectedCity(option.name,itemChoi,itemNghi,itemAn,itemATM,itemCayXang)
                       }}>
 
                     <Text
@@ -172,7 +246,7 @@ var {height, width} = Dimensions.get('window');
   const styles = StyleSheet.create({
    
     wrapper:{
-        height:height/15,
+        height:height/12,
         padding:10,
         backgroundColor:'#1D93F4',
         justifyContent:'center'
@@ -180,6 +254,7 @@ var {height, width} = Dimensions.get('window');
     
     textInput:{
         fontSize: 18,
+        marginTop:12,
         backgroundColor:'#1D93F4',
         padding:10, height:height/15, textAlign:'center',
         color:'#fff',
