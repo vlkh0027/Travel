@@ -18,7 +18,7 @@ export default class Loading extends Component {
         />
 
         <Text style={{fontSize:12,fontFamily:'Avenir',}}>
-          Loading...
+          Nhấn chọn thành phố sau đó chọn tab mà bạn muốn xem ;)
         </Text>
       </View>
     );

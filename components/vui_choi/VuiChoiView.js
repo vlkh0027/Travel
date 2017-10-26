@@ -40,7 +40,7 @@ class VuiChoiView extends Component {
 
     render()
      { 
-        if(this.props.isLoading === true || this.props.arrVuiChoi === []){
+        if(this.props.isLoading === true ){
             return <Loading/>
         }else{
             return(

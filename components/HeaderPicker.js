@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import ModalPicker from 'react-native-modal-picker'
-import {SelectedCity} from './../redux/action';
+import {SelectedCity,SelectedStart} from './../redux/action';
 import {connect} from 'react-redux';
 
 import firebase from './../components/FirebaseConf';
@@ -32,6 +32,8 @@ var {height, width} = Dimensions.get('window');
       arrChoi:[],
       arrATM:[],
       arrCayXang:[],
+      arrLichTrinh:[],
+      isLoading:true,
     }
    
   }
@@ -42,6 +44,7 @@ var {height, width} = Dimensions.get('window');
     var itemAn=[];
     var itemATM=[];
     var itemCayXang=[];
+    var itemLichTrinh=[];
     
 
     itemRef = firebase.database();
@@ -50,7 +53,8 @@ var {height, width} = Dimensions.get('window');
     phuotNghi = itemRef.ref('phuot').child("DaLat").child('nghi').child('thongtin');
     phuotAn = itemRef.ref('phuot').child("DaLat").child('an').child('thongtin');
     phuotATM = itemRef.ref('phuot').child("DaLat").child('atm');
-    phuotCayXang = itemRef.ref('phuot').child("DaLat").child('cayxang');
+    phuotCayXang = itemRef.ref('phuot').child("DaLat").child('xang');
+    phuotLichTrinh = itemRef.ref('phuot').child("DaLat").child('lichtrinh');
    
   
     phuotChoi.on('value', (snap)=>{
@@ -113,9 +117,21 @@ var {height, width} = Dimensions.get('window');
                 
             });        
         });  
+        phuotLichTrinh.on('value', (snap)=>{
+            
+                    snap.forEach((data)=>{
+                        
+                    itemLichTrinh.push(
+                        { 
+                            key:data.key,
+                            phuot:data.val(),
+                        });
+                        
+                    });        
+                });  
   
 
-    this.props.SelectedCity("DaLat",itemChoi,itemNghi,itemAn,itemATM,itemCayXang)
+    this.props.SelectedCity("DaLat",itemChoi,itemNghi,itemAn,itemATM,itemCayXang,itemLichTrinh)
   }
 
     render() {
@@ -157,6 +173,7 @@ var {height, width} = Dimensions.get('window');
                         var itemAn=[];
                         var itemATM=[];
                         var itemCayXang=[];
+                        var itemLichTrinh=[];
                      this.setState({cityName:option.label}),
                     itemRef = firebase.database();
                    
@@ -164,7 +181,8 @@ var {height, width} = Dimensions.get('window');
                         phuotNghi = itemRef.ref('phuot').child(option.name).child('nghi').child('thongtin');
                         phuotAn = itemRef.ref('phuot').child(option.name).child('an').child('thongtin');
                         phuotATM = itemRef.ref('phuot').child("DaLat").child('atm');
-                        phuotCayXang = itemRef.ref('phuot').child("DaLat").child('cayxang');
+                        phuotCayXang = itemRef.ref('phuot').child("DaLat").child('xang');
+                        phuotLichTrinh = itemRef.ref('phuot').child("DaLat").child('lichtrinh');
                  
                         console.log("ko rỗng");
                       
@@ -228,9 +246,21 @@ var {height, width} = Dimensions.get('window');
                                     
                                 });        
                             });  
-                        
+                            phuotLichTrinh.on('value', (snap)=>{
+                                
+                                        snap.forEach((data)=>{
+                                            
+                                        itemLichTrinh.push(
+                                            { 
+                                                key:data.key,
+                                                phuot:data.val(),
+                                            });
+                                            
+                                        });        
+                                    });  
                     
-                     this.props.SelectedCity(option.name,itemChoi,itemNghi,itemAn,itemATM,itemCayXang)
+                     this.props.SelectedStart(option.name,itemChoi,itemNghi,itemAn,itemATM,itemCayXang,itemLichTrinh);
+                     //this.props.SelectedStart();
                       }}>
 
                     <Text
@@ -263,4 +293,4 @@ var {height, width} = Dimensions.get('window');
  
   });
 
-  export default connect(null,{SelectedCity})(HeaderPicker);
+  export default connect(null,{SelectedCity,SelectedStart})(HeaderPicker);

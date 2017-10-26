@@ -85,7 +85,7 @@ class HoTroView extends Component {
             mapContainer, wrapper, title,titleContainer,txtColor, list, textATM,
             rowInfoContainer, imageStyle, infoText,textMain,textBlack,textHighlight,textSmoke
         } = styles;
-        if(this.props.isLoading === true || this.props.arrAnUong === []){
+        if(this.props.isLoading === true ){
             return <Loading/>
         }else{
             return (
@@ -95,15 +95,15 @@ class HoTroView extends Component {
                         <Text style={infoText}>Trụ rút tiền ATM</Text>
                     </View>
                 </View>
-                <View style={{flex:5}}> 
+                <View style={{flex:5, paddingHorizontal:10}}> 
                     <FlatList
                     keyExtractor={(item, index) => item.key}
-                        data={this.props.arrAnUong}
+                        data={this.props.arrATM}
                         renderItem={({item}) => 
                         <View style={list}>
                             <View style={titleContainer}>
                                 <Text style={textMain}>
-                                <Text style={textBlack}>{`$Trụ ATM`.toUpperCase()}</Text>
+                                <Text style={textBlack}>{`${item.phuot.ten}`.toUpperCase()}</Text>
                                 </Text>
                             </View>
                             <View style={{marginLeft:10,}}>
@@ -121,15 +121,15 @@ class HoTroView extends Component {
                         <Text style={infoText}>Cây Xăng </Text>
                     </View>
                 </View>
-                <View style={{flex:5}}> 
+                <View style={{flex:5, paddingHorizontal:10, paddingBottom:15}}> 
                 <FlatList
                 keyExtractor={(item, index) => item.key}
-                    data={this.props.arrAnUong}
+                    data={this.props.arrCayXang}
                     renderItem={({item}) => 
                     <View style={list}>
                         <View style={titleContainer}>
                             <Text style={textMain}>
-                            <Text style={textATM}>{`$cay xang`.toUpperCase()}</Text>
+                            <Text style={textATM}>{`Trạm xăng dầu ${item.key}`.toUpperCase()}</Text>
                             </Text>
                         </View>
                         <View style={{marginLeft:10,}}>
@@ -218,7 +218,6 @@ const styles = StyleSheet.create({
         marginBottom:3,
     },
     list:{
-        
         margin:5,
         backgroundColor:'#FFFFFF',
         padding:5,
@@ -232,7 +231,8 @@ const styles = StyleSheet.create({
 });
 function mapStateToProps(state) {
     return {
-      arrAnUong: state.arrAnUong,
+        arrATM:state.arrATM,
+        arrCayXang:state.arrCayXang,
       cityName:state.cityName,
       isLoading:state.isLoading,
     };

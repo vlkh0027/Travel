@@ -30,7 +30,8 @@ class AnUongView extends Component {
         ];
         if (this.refs.myRef) 
             this.setState({myVar: true});
-            
+        console.log("linh la cho"+this.props.isLoading);
+        console.log("linh la cho"+this.props.cityName);
     }
 
     gotoDetail(item){
@@ -40,7 +41,7 @@ class AnUongView extends Component {
 
     render() {
         
-            if(this.props.isLoading === true || this.props.arrAnUong === []){
+            if(this.props.isLoading === true ){
                 return <Loading/>
             }else{
                 return(

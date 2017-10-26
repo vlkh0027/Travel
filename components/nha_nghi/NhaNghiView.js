@@ -38,7 +38,7 @@ class NhaNghiView extends Component {
     
     render() {
         
-        if(this.props.isLoading === true || this.props.arrNhaNghi === []){
+        if(this.props.isLoading === true ){
             return <Loading/>
         }else{
             return(
