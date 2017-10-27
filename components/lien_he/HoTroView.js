@@ -82,7 +82,7 @@ class HoTroView extends Component {
 
     render() {
         const {
-            mapContainer, wrapper, title,titleContainer,txtColor, list, textATM,
+             wrapper, title,titleContainer,txtColor, list, textATM,
             rowInfoContainer, imageStyle, infoText,textMain,textBlack,textHighlight,textSmoke
         } = styles;
         if(this.props.isLoading === true ){
@@ -95,7 +95,7 @@ class HoTroView extends Component {
                         <Text style={infoText}>Trụ rút tiền ATM</Text>
                     </View>
                 </View>
-                <View style={{flex:5, paddingHorizontal:10}}> 
+                <View style={{flex:4, paddingHorizontal:10}}> 
                     <FlatList
                     keyExtractor={(item, index) => item.key}
                         data={this.props.arrATM}
@@ -121,7 +121,7 @@ class HoTroView extends Component {
                         <Text style={infoText}>Cây Xăng </Text>
                     </View>
                 </View>
-                <View style={{flex:5, paddingHorizontal:10, paddingBottom:15}}> 
+                <View style={{flex:4, paddingHorizontal:10, paddingBottom:15}}> 
                 <FlatList
                 keyExtractor={(item, index) => item.key}
                     data={this.props.arrCayXang}
@@ -151,23 +151,17 @@ class HoTroView extends Component {
 const { width,height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     wrapper: { flex: 1, backgroundColor: '#F6F6F6' },
-    mapStyle: {
-        width: width - 40,
-        height: 230,
-        alignSelf: 'center',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
+    
     
     title: {
         padding: 5,
         flex:1,
-        width:width/2,
+        width:width-100,
         alignItems:'center',
         backgroundColor:'#DBDBDB',
         justifyContent:'center',
         margin: 10,
-        borderRadius: 20,
+        borderRadius: 10,
         shadowColor: '#3B5458',
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.2

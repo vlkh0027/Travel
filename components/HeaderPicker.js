@@ -180,9 +180,9 @@ var {height, width} = Dimensions.get('window');
                         phuotChoi = itemRef.ref('phuot').child(option.name).child('choi').child('thongtin');
                         phuotNghi = itemRef.ref('phuot').child(option.name).child('nghi').child('thongtin');
                         phuotAn = itemRef.ref('phuot').child(option.name).child('an').child('thongtin');
-                        phuotATM = itemRef.ref('phuot').child("DaLat").child('atm');
-                        phuotCayXang = itemRef.ref('phuot').child("DaLat").child('xang');
-                        phuotLichTrinh = itemRef.ref('phuot').child("DaLat").child('lichtrinh');
+                        phuotATM = itemRef.ref('phuot').child(option.name).child('atm');
+                        phuotCayXang = itemRef.ref('phuot').child(option.name).child('xang');
+                        phuotLichTrinh = itemRef.ref('phuot').child(option.name).child('lichtrinh');
                  
                         console.log("ko rỗng");
                       
@@ -276,7 +276,7 @@ var {height, width} = Dimensions.get('window');
   const styles = StyleSheet.create({
    
     wrapper:{
-        height:height/12,
+        height:height/11,
         padding:10,
         backgroundColor:'#1D93F4',
         justifyContent:'center'
